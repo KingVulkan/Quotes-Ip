@@ -14,7 +14,7 @@ This is an app that allows users to type and post their quotes and give it a thu
 
 
 
-###Technology used
+### Technology used
 
 Angular cli was used alongside bootstrap and css to develop the Quote application. Git is used on the other side as the version control for tracking changes on the local and remote repository.
  
