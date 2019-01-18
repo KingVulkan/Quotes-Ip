@@ -11,7 +11,13 @@ Abdulrahman Abdullahi Omar
 This is an app that allows users to type and post their quotes and give it a thumbs up or a thumbs down. 
 
 ### Link to live site in Github Pages
+
+
+###Technology used
+Angular cli was used alongside bootstrap and css to develop the Quote application. Git is used on the other side as the version control for tracking changes on the local and remote repository.
  
+
+
 ### Behaviour Driven Development
 
 |Behaviour|input|output|
