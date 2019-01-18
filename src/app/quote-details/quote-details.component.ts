@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter , Input , Output } from '@angular/core';
-import {Quotes} from '../quotes' ;
-import { Quote } from '@angular/compiler';
+import { Component, OnInit, Input, Output, EventEmitter, } from '@angular/core';
+import { Quote } from '../quote';
+import { isListLikeIterable } from '@angular/core/src/change_detection/change_detection_util';
 
 @Component({
   selector: 'app-quote-details',
@@ -8,12 +8,24 @@ import { Quote } from '@angular/compiler';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  @Input()quote: Quotes ;
-  @Output() isComplete = new EventEmitter<boolean>() ;
+  @Input() quote: Quote;
+  @Output() toDelete = new EventEmitter<boolean>();
 
-  quoteComplete(complete: boolean) {
-    this.isComplete.emit(complete) ;
+
+  likeCount = 0;
+  dislikeCount = 0;
+
+  like() {
+    this.likeCount = this.likeCount + 1;
   }
+  dislike() {
+    this.dislikeCount = this.dislikeCount + 1;
+  }
+
+  quoteDelete(remove: boolean) {
+    this.toDelete.emit(remove);
+  }
+
 
   constructor() { }
 
@@ -21,3 +33,4 @@ export class QuoteDetailsComponent implements OnInit {
   }
 
 }
+
