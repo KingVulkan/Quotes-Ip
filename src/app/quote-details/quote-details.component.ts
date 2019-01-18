@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, } from '@angular/core';
-import { Quote } from '../quote';
+import { Quotes } from '../quotes';
 import { isListLikeIterable } from '@angular/core/src/change_detection/change_detection_util';
 
 @Component({
@@ -8,7 +8,7 @@ import { isListLikeIterable } from '@angular/core/src/change_detection/change_de
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  @Input() quote: Quote;
+  @Input() quote: Quotes;
   @Output() toDelete = new EventEmitter<boolean>();
 
 
