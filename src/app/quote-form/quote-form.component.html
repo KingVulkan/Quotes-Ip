@@ -8,27 +8,24 @@
                <label for="name">Author</label>
                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
            <!--Testing  to see if we get data-->
-
-</div>
-<div class="form-group">
-
-  <label for="description">Inspirational Quote</label>
-  <textarea class="form-control" id="description" rows="4" required></textarea>
-
-</div>
-<div class="form-group">
-  <label for="submitter"> By </label>
-  <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" name="submitter">
-</div>
-<div class="form-group">
-  <label for="submission Date">Submission Date</label>
-  <input type='date' id="submission" required>
-
-</div>
-</div>
-<form (ngSubmit) ='submitQuote()' #quoteForm ='ngForm'>
-<button type= "Submit" class = "sbm">Add quote</button>
-</form>
-</form>
-</div>
-</div>
+          </div>
+          <div class="form-group">
+          
+            <label for="description">Inspirational Quote</label>
+            <textarea class="form-control" id="description" rows="4" required></textarea>
+          
+          </div>
+          <div class="form-group">
+            <label for="submitter"> By </label>
+            <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" name="submitter">
+          </div>
+          <div class="form-group">
+            <label for="submission Date">Submission Date</label>
+            <input type='date' id="submission" required>          
+          </div>
+          </div>
+          <form (ngSubmit) ='submitQuote();' #quoteForm ='ngForm'>
+          <button type= "Submit" class = "sbm">Add quote</button>
+          </form>
+          </form>
+          </div>
